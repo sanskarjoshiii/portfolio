@@ -730,11 +730,11 @@ main {
 
 .clients-list {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
   margin: 0 -15px;
-  padding: 25px;
+  padding: 10px 25px 25px;
   padding-bottom: 25px;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -744,14 +744,17 @@ main {
 }
 
 .clients-item {
-  min-width: 50%;
+  min-width: auto;
   scroll-snap-align: start;
 }
 
 .clients-item img {
-  width: 100%;
-  filter: grayscale(1);
+  width: 120px;
   transition: var(--transition-1);
+}
+
+.clients-item:nth-child(2) img {
+  width: 140px;
 }
 
 .clients-item img:hover { filter: grayscale(0); }
@@ -829,9 +832,38 @@ main {
   line-height: 1.6;
 }
 
+.company-roles {
+  margin-top: 12px;
+  padding-left: 14px;
+  border-left: 2px solid var(--jet);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.role-item { display: flex; flex-direction: column; gap: 3px; }
+
+.role-title {
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+}
+
+.role-meta {
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-300);
+}
+
+.role-skills {
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-300);
+}
+
 
 /**
- * skills 
+ * skills
  */
 
 .skills-title { margin-bottom: 20px; }
@@ -1812,8 +1844,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .main-content {
-    min-width: 75%;
-    width: 75%;
+    min-width: 68%;
+    width: 68%;
     margin: 0;
   }
 
@@ -1854,9 +1886,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .contacts-list { grid-template-columns: 1fr; }
 
   .contact-info :is(.contact-link) {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    word-break: break-all;
   }
 
   .contact-info :is(.contact-link, time, address) {
