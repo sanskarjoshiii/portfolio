@@ -333,7 +333,22 @@ main {
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 89px;
+  height: 89px;
+}
+
+.avatar-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-box img {
+  width: 93%;
+  height: 93%;
+  object-fit: contain;
 }
 
 .info-content .name {
@@ -1472,9 +1487,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { gap: 25px; }
 
-  .avatar-box { border-radius: 30px; }
+  .avatar-box { border-radius: 8px; width: 104px; height: 104px; }
 
-  .avatar-box img { width: 120px; }
+  .avatar-box img { width: 100%; }
 
   .info-content .name { margin-bottom: 15px; }
 
@@ -1970,7 +1985,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .avatar-box img { width: 150px; }
+  .avatar-box { width: 175px; height: 175px; }
+  .avatar-box img { width: 100%; }
 
   .info-content .name {
     white-space: nowrap;
