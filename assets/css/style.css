@@ -749,21 +749,21 @@ img[alt="Portrait sketching icon"] {
 
 .clients-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 5px;
-  margin: 0 -15px;
-  padding: 10px 25px 25px;
-  padding-bottom: 25px;
+  gap: 20px;
+  padding: 10px 20px 25px;
   overflow-x: auto;
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
-  scroll-padding-inline: 25px;
+  -webkit-overflow-scrolling: touch;
 }
 
+.clients-list::-webkit-scrollbar { display: none; }
+
 .clients-item {
-  min-width: auto;
+  flex-shrink: 0;
   scroll-snap-align: start;
 }
 
@@ -1389,7 +1389,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * client
    */
 
-  .clients-item { min-width: calc(33.33% - 10px); }
+  .clients-item { min-width: auto; }
 
 
 
@@ -1623,14 +1623,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* clients */
 
-  .clients-list {
-    gap: 50px;
-    margin: 0 -30px;
-    padding: 45px;
-    scroll-padding-inline: 45px;
-  }
-
-  .clients-item { min-width: calc(33.33% - 35px); }
+  .clients-list { gap: 30px; padding: 10px 30px 25px; }
 
 
 
@@ -1886,7 +1879,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* clients */
 
-  .clients-item { min-width: calc(25% - 38px); }
+  .clients-list { gap: 40px; }
 
 
 
