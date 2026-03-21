@@ -82,12 +82,6 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 
-// resume download toast
-document.getElementById('resume-download-btn').addEventListener('click', function () {
-  var toast = document.getElementById('resume-toast');
-  toast.classList.add('show');
-  setTimeout(function () { toast.classList.remove('show'); }, 2500);
-});
 
 // lightbox gallery images
 const projectImages = {
